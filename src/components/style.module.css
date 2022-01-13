@@ -1,0 +1,37 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.divInput {
+  width: 100%;
+  padding: 10px 0px;
+  color: gray;
+}
+.input {
+  color: black;
+  padding: 0px 0px 10px 0px;
+  width: calc(100% - 30px);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1.5px solid gray;
+}
+@keyframes textCopied {
+  0% {
+    color: green;
+    font-weight: bold;
+  }
+  100% {
+    color: black;
+  }
+}
+.copied {
+  animation-name: textCopied;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+}

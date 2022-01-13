@@ -1,25 +1,8 @@
 import React, { Component } from 'react';
 import Input from './Input';
 import Output from './Output';
-import { v4 as uuid } from 'uuid';
+import {transforms} from './transforms.js';
 import css from './style.module.css';
-
-const transforms = [
-  {
-    id: uuid(),
-    nome: 'Texto Invertido',
-    transform: (texto) => {
-      return texto.split('').reverse().join('');
-    },
-  },
-  {
-    id: uuid(),
-    nome: 'CSV',
-    transform: (texto) => {
-      return `"${texto.split(' ').join('";"')}"`;
-    },
-  },
-];
 
 export default class TextTransform extends Component {
   constructor() {
@@ -39,7 +22,7 @@ export default class TextTransform extends Component {
     const { entrada } = this.state;
     return (
       <div className={css.container}>
-        <h1 style={{ textAlign: 'center' }}>react-text-transformer</h1>
+        <h1 style={{ textAlign: 'center' }}>React-Text-Transformer</h1>
         <Input
           entrada={this.atualizaTexto}
           legenda={'Digite um texto qualquer:'}
